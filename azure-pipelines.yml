@@ -13,11 +13,13 @@ resources:
   repositories:
     - repository: templates
       type: git
-      name: himanshu05/Private AKS
+      name: Private AKS/templates
       ref: refs/heads/master
 
 steps:
-- script: echo $(ls -R)
+- checkout: templates
+- script: |
+    echo $(ls -R)
   displayName: 'Run a one-line script'
 
 - script: |
