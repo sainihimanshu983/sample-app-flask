@@ -14,10 +14,10 @@ resources:
     - repository: templates
       type: git
       name: Private AKS/templates
-      ref: refs/heads/master
+      ref: refs/heads/main
 
 steps:
-- checkout: templates
+# - checkout: templates
 - script: |
     echo $(ls -R)
   displayName: 'Run a one-line script'
