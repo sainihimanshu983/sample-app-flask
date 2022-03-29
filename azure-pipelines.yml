@@ -9,8 +9,15 @@ trigger:
 pool:
   vmImage: ubuntu-latest
 
+resources:
+  repositories:
+    - repository: templates
+      type: git
+      name: himanshu05/Private AKS
+      ref: refs/heads/master
+
 steps:
-- script: echo Hello, world!
+- script: echo $(ls -R)
   displayName: 'Run a one-line script'
 
 - script: |
