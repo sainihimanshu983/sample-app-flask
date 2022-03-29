@@ -17,7 +17,7 @@ resources:
       ref: refs/heads/main
 
 steps:
-# - checkout: templates
+- checkout: templates
 - script: |
     echo $(ls -R)
   displayName: 'Run a one-line script'
